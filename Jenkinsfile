@@ -10,7 +10,7 @@ pipeline {
       parallel {
         stage('restore') {
           steps {
-            sh 'npm install'
+            sh 'npm install --registry=https://registry.npm.taobao.org'
           }
         }
         stage('demo') {
