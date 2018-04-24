@@ -7,6 +7,9 @@ pipeline {
           additionalBuildArgs '-t lu:latest'
         }
       }
+      steps {
+        
+      }
     }
     stage('deploy') {
       agent {
