@@ -9,7 +9,7 @@ pipeline {
         }
       }
       steps {
-        sh 'docker build . -t lu:latest'
+        sh 'echo \'docker build . -t lu:latest\''
       }
     }
     stage('deploy') {
