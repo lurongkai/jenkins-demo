@@ -20,9 +20,17 @@ pipeline {
         }
       }
     }
+    stage('build-docker') {
+      agent any
+      steps {
+        sh 'docker build . -t lu:latest'
+      }
+    }
     stage('deploy') {
+      agent any
       steps {
         sh 'echo \'deploying demo\''
+        sh 'docker run -d lu:latest'
       }
     }
   }
