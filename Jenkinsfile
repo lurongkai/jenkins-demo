@@ -20,7 +20,7 @@ pipeline {
         }
       }
     }
-    stage('') {
+    stage('artifacts') {
       steps {
         archiveArtifacts(artifacts: 'jenkins-demo', onlyIfSuccessful: true)
       }
