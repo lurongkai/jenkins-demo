@@ -4,6 +4,6 @@ node {
   }
   stage('deploy') {
     sh 'echo \'deploying demo\''
-    sh 'docker run -d -p 8888:3000 Lu:${env.BUILD_NUMBER}'
+    sh "docker run -d -p 8888:3000 Lu:${env.BUILD_NUMBER}""
   }
 }
