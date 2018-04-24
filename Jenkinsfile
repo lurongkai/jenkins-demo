@@ -3,6 +3,7 @@ pipeline {
     docker {
       image 'node'
     }
+
   }
   stages {
     stage('restore') {
@@ -17,11 +18,6 @@ pipeline {
             echo 'hello jenkins'
           }
         }
-      }
-    }
-    stage('artifacts') {
-      steps {
-        archiveArtifacts(artifacts: 'jenkins-demo', onlyIfSuccessful: true)
       }
     }
     stage('deploy') {
