@@ -4,7 +4,7 @@ pipeline {
     stage('build-image') {
       steps {
         script {
-          sh 'echo build docker images'
+          sh 'echo \'build docker images\''
           docker.build("lu:${env.BUILD_NUMBER}")
         }
       }
