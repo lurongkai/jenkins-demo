@@ -4,7 +4,6 @@ pipeline {
     stage('build-docker') {
       agent {
         dockerfile {
-          label 'lu:latest'
           additionalBuildArgs '-t lu:latest'
         }
       }
