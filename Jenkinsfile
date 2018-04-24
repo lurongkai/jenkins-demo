@@ -27,7 +27,7 @@ pipeline {
       }
     }
     stage('deploy') {
-      agent node
+      agent none
       steps {
         sh 'echo \'deploying demo\''
         sh 'docker run -d lu:latest'
