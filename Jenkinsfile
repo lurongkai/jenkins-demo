@@ -10,9 +10,7 @@ pipeline {
       parallel {
         stage('restore') {
           steps {
-            nodejs(nodeJSInstallationName='Node 9.x') {
-              sh 'npm install'
-            }
+            sh 'npm install'
           }
         }
         stage('demo') {
