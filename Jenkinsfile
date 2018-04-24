@@ -5,7 +5,9 @@ pipeline {
       parallel {
         stage('restore') {
           steps {
-            sh 'npm install'
+            nodejs() {
+              sh 'npm install'
+            }
           }
         }
         stage('demo') {
