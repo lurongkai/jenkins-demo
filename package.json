@@ -1,0 +1,22 @@
+{
+  "name": "jenkins-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lurongkai/jenkins-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lurongkai/jenkins-demo/issues"
+  },
+  "homepage": "https://github.com/lurongkai/jenkins-demo#readme",
+  "dependencies": {
+    "koa": "^2.5.0"
+  }
+}
