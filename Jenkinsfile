@@ -12,6 +12,7 @@ pipeline {
     stage('deploy') {
       steps {
         sh 'echo \'deploy docker image to port 8888\''
+        input message: 'Finished using? (Click "Proceed" to continue)'
         sh "docker run -d -p 8888:3000 lu:${env.BUILD_NUMBER}"
       }
     }
