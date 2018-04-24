@@ -4,8 +4,8 @@ pipeline {
     stage('build-docker') {
       agent {
         dockerfile {
-          filename 'Dockerfile'
           label 'lu:latest'
+          additionalBuildArgs '-t lu:latest'
         }
       }
       steps {
