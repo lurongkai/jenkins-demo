@@ -1,16 +1,10 @@
 pipeline {
-  agent none
-  stages {
-    stage('build-docker') {
-      agent {
-        dockerfile {
-          additionalBuildArgs '-t lu:latest'
-        }
-      }
-      steps {
-        
-      }
+  agent {
+    dockerfile {
+      additionalBuildArgs '-t lu:latest'
     }
+  }
+  stages {
     stage('deploy') {
       agent {
         node { label 'master' }
