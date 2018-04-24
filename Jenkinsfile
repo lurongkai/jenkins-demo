@@ -1,5 +1,4 @@
-pipeline {
-  agent any
+node {
   stages {
     stage('build-image') {
       steps {
